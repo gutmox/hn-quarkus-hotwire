@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type="module">
+        import hotwiredTurbo from 'https://cdn.skypack.dev/@hotwired/turbo';
+    </script>
+    <meta charset="UTF-8">
+    <title>Hacker News</title>
+</head>
+
+<body>
+    <h1>Hello {name}</h1>
+    <turbo-frame id="ranking" src="/ranking">
+        <p>This message will be replaced by the response from /messages.</p>
+    </turbo-frame>
+
+    <turbo-stream action="append" target="messages">
+        <template>
+            <div id="message_1">My new message!</div>
+        </template>
+    </turbo-stream>
+</body>
+
+</html>
